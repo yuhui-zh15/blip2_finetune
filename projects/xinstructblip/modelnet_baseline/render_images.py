@@ -6,7 +6,7 @@
 
 from tqdm import tqdm
 import pickle
-import open3d as o3d
+# import open3d as o3d
 import numpy as np
 from PIL import Image
 
