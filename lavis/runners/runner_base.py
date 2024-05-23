@@ -270,17 +270,17 @@ class RunnerBase:
 
     @property
     def log_freq(self):
-        log_freq = self.config.run_cfg.get("log_freq", 50)
+        log_freq = 1  # self.config.run_cfg.get("log_freq", 50)
         return int(log_freq)
     
     @property
     def save_freq(self):
-        save_freq = self.config.run_cfg.get("save_freq", 5)
+        save_freq = 20  # self.config.run_cfg.get("save_freq", 5)
         return int(save_freq)
 
     @property
     def val_freq(self):
-        val_freq = self.config.run_cfg.get("val_freq", 1)
+        val_freq = 5  # self.config.run_cfg.get("val_freq", 1)
         return int(val_freq)
     
     @property

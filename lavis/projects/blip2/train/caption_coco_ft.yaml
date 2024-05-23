@@ -7,7 +7,7 @@ model:
   arch: blip2_opt
   model_type: caption_coco_opt2.7b
   load_finetuned: False
-  use_grad_checkpoint: True
+  use_grad_checkpoint: False
   freeze_vit: True
 
 datasets:
@@ -38,13 +38,13 @@ run:
   warmup_lr: 1e-8
   warmup_steps: 1000
   weight_decay: 0.05
-  max_epoch: 3
-  batch_size_train: 16
-  batch_size_eval: 8
-  num_workers: 4
+  max_epoch: 100
+  batch_size_train: 32
+  batch_size_eval: 16
+  num_workers: 2
   accum_grad_iters: 1
 
-  max_len: 15
+  max_len: 50
   min_len: 1
   num_beams: 1
 
